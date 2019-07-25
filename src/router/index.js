@@ -2,10 +2,11 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Editor from 'components/editor/editor'
+import HomePage from 'components/home-page/home-page'
 
 Vue.use(Router)
 
-const HomePage = () => import('components/home-page/home-page')
+// const HomePage = () => import('components/home-page/home-page')
 
 export default new Router({
   routes: [

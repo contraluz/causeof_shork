@@ -1,14 +1,30 @@
 <template>
   <div id="app">
-    <h2>hello world</h2>
+    <mt-header title="唐诗宋词赏析" fixed>
+      <mt-button slot="left" icon="back" @click="goBackHome">返回</mt-button>
+      <mt-button icon="more" slot="right"></mt-button>
+    </mt-header>
+    <!-- <mt-loadmore :top-method="loadTop" ref="loadmore">
+      <ul>
+        <li v-for="item in list">{{ item }}</li>
+      </ul>
+    </mt-loadmore>-->
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+var id = 0;
 export default {
   name: "app",
-  methods: {},
+  data() {
+    return {};
+  },
+  methods: {
+    goBackHome() {
+      this.$router.push("/");
+    }
+  },
   components: {}
 };
 </script>
@@ -53,12 +69,6 @@ figcaption {
   font-family: "Microsoft Yahei", sans-serif;
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
-}
-
-html,
-body {
-  width: 100%;
-  height: 100%;
 }
 
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
