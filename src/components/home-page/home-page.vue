@@ -3,7 +3,7 @@
     <mt-loadmore :top-method="loadTop" ref="loadmore">
       <ul>
         <router-link v-for="item in list" :key="item" :to="'/editor/:' + item">
-          <li class="li" :class="{'li-last': item === 5}">{{ item }}</li>
+          <li class="li" :class="{'li-last': item === list.length}">{{ item }}</li>
         </router-link>
       </ul>
     </mt-loadmore>

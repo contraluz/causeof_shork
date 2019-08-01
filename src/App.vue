@@ -4,11 +4,6 @@
       <mt-button slot="left" icon="back" @click="goBackHome">返回</mt-button>
       <mt-button icon="more" slot="right"></mt-button>
     </mt-header>
-    <!-- <mt-loadmore :top-method="loadTop" ref="loadmore">
-      <ul>
-        <li v-for="item in list">{{ item }}</li>
-      </ul>
-    </mt-loadmore>-->
     <router-view></router-view>
   </div>
 </template>
